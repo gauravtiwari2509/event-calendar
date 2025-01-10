@@ -1,50 +1,67 @@
-# React + TypeScript + Vite
+# Event Calendar Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Live Demo](https://event-calendar-woad.vercel.app/)
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dynamic Month Navigation:**
 
-## Expanding the ESLint configuration
+  - Switch between months to explore dates.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Event Management:**
 
-- Configure the top-level `parserOptions` property like this:
+  - Add events with specific names, descriptions, start times, and end times.
+  - Delete existing events as needed.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Color-Coded Dates:**
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+  - Dates with events are visually distinguished using a different color.
+  - The current date is highlighted for easy identification.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Validation:**
+  - Events cannot be added to past dates or times.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## How to Run Locally
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+   ```
+
+2. **Install Dependencies**
+
+   Make sure you have [Node.js](https://nodejs.org/) installed.
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the App**
+
+   Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Access the App**
+
+   Open your browser and go to:
+
+   ```
+   http://localhost:5173
+   ```
+
+## Deployed App
+
+Experience the live version here: [Event Calendar App](https://event-calendar-woad.vercel.app/)
+
+## Tech Stack
+
+- **Frontend:** React.js with TypeScript
+- **Styling:** Tailwind CSS
+- **Component Library:** ShadCN UI
+- **Build Tool:** Vite
+- **Deployment:** Vercel
